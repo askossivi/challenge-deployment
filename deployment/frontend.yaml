@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: challenge-demo
+  name: challenge-demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: challenge-demo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: challenge-demo
+    spec:
+      containers:
+      - image: devtraining/frontend-challenge:latest
+        name: challenge-demo
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: challenge-service
+  labels:
+    app: challenge-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 5000
+  selector:
+    app: challenge-demo
+
+
+
