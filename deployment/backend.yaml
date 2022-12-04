@@ -30,7 +30,7 @@ metadata:
   labels:
     app: backend-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - port: 8080
     targetPort: 8080
