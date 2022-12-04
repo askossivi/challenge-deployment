@@ -18,7 +18,7 @@ spec:
         app: backend-demo
     spec:
       containers:
-      - image: devtraining/backend-challenge:latest
+      - image: devtraining/backend-challenge:8
         name: backend-demo
         resources: {}
 status: {}

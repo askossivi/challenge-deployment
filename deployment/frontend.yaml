@@ -18,7 +18,7 @@ spec:
         app: challenge-demo
     spec:
       containers:
-      - image: devtraining/frontend-challenge:latest
+      - image: devtraining/frontend-challenge:8
         name: challenge-demo
         resources: {}
 status: {}
